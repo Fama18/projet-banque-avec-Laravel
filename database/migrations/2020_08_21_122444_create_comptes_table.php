@@ -15,9 +15,9 @@ class CreateComptesTable extends Migration
     {
         Schema::create('comptes', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('clientmorals_id')->unsigned();
-            $table->foreign('clientmorals_id')->references('id')->on('clientsmorals');
-            $table->bigInteger('clientphysiques_id')->unsigned();
+            $table->integer('clientmorals_id')->unsigned();
+            $table->foreign('clientmorals_id')->references('id')->on('clientmorals');
+            $table->integer('clientphysiques_id')->unsigned();
             $table->foreign('clientphysiques_id')->references('id')->on('clientphysiques');
             $table->string('numeroagence');
             $table->string('numerocompte');

@@ -26,10 +26,11 @@
                                <td>{{ $clientmoral->raisonsocial }}</td>
                                <td>{{ $clientmoral->numident }}</td>
                                <td><a href="{{ route('editclientmoral', ['id'=>$clientmoral->id]) }}">Editer</a></td>
-                               <td><a href="{{ route('deleteclientmoral', ['id'=>$clientmoral->id]) }}">Supprimer</a></td>
+                               <td><a href="{{ route('deleteclientmoral', ['id'=>$clientmoral->id]) }}" onclick="return confirm('Voulez-vous supprimer le client ?')" >Supprimer</a></td>
                            </tr>
                        @endforeach
                     </table>
+                    {{ $liste_clientmorals->links() }}
                 </div>
             </div>
         </div>

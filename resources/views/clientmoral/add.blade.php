@@ -31,7 +31,7 @@
                                 <label class="control-label" for="raisonsocial">Raison Social</label>
                                 <input class="form-control" type="text" name="raisonsocial" id="raisonsocial" />
                         </div>
-                        
+
                         <div class="form-group">
                                 <label class="control-label" for="numident">Numero d'identification</label>
                                 <input class="form-control" type="text" name="numident" id="numident" />
@@ -39,7 +39,7 @@
 
                         <div class="form-group">
                                 <input class="btn btn-success" type="submit" name="envoyer" id="envoyer" value="Envoyer" />
-                                <input class="btn btn-danger" type="reset" name="annuler" id="annuler" value="Annuler" />
+                        <a class="btn btn-danger" href="{{ route('getAllclientmoral') }}">Annuler</a>
                         </div>
                    </form>
 
